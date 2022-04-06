@@ -1,8 +1,12 @@
-# 📌 Aplicación de Tareas
+<p align='center'>
+  <img width="550" src="src/imagenes/todoList.png" alt="todoList"/>
+<p/>
+
+# 📌 Aplicación de Tareas 
 ¡Hola! Esta es una aplicación de tareas interactiva desarrollada con React. Puedes agregar una tarea, eliminarla de la lista y marcarla como completada.
 
 <p align="center">
-  <img width="700" src="src/imagenes/todoList-screen2.png" alt="cli output"/>
+  <img width="700" src="src/imagenes/todoList-screen3.png" alt="todoList"/>
 </p>
 
 ## Ejecutar la Aplicación
