@@ -4,8 +4,9 @@ import Tarea from './Tarea';
 import '../hojas-de-estilo/ListaDeTareas.css';
 
 function ListaDeTareas() {
-
+  
   const [tareas, setTareas] = useState([]);
+/*   localStorage.setItem('tareas', JSON.stringify(tareas)) */
 
   const agregarTarea = tarea => {
     if (tarea.texto.trim()){
@@ -30,7 +31,13 @@ function ListaDeTareas() {
     setTareas(tareasActualizadas)
   };
 
-  /* localStorage.setItem('tareas', JSON.stringify(tareas)) */
+  /* const leerLocalStorage = () => {
+    if (localStorage.getItem('tareas') === null) {
+      tareas = [];
+    } else {
+      tareas = JSON.parse(localStorage.getItem('tareas'));
+    }
+  } */
 
   return(
     <>
@@ -44,7 +51,8 @@ function ListaDeTareas() {
             texto={tarea.texto}
             completada={tarea.completada}
             completarTarea={completarTarea}
-            eliminarTarea={eliminarTarea} />
+            eliminarTarea={eliminarTarea}
+             />
         )
       }      
      </div>
