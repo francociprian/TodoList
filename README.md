@@ -9,6 +9,8 @@
   <img width="700" src="src/imagenes/todoList-screen3.png" alt="todoList"/>
 </p>
 
+### Despliegue con vercel: <https://lista-de-tareas-franco.vercel.app/>
+
 ## Ejecutar la Aplicación
 Para iniciar la aplicación, debes ejecutar el comando `npm start` en el terminal. Si trabajas con Visual Studio Code, puedes abrir el terminal con el atajo de teclado `ctrl + ñ` si tu teclado está en español y con ``ctrl + ` `` si tu teclado está en inglés.
 
