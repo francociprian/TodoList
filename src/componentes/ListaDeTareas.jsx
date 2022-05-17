@@ -1,12 +1,20 @@
-import React, { useState }  from 'react';
+import React, { useEffect, useState }  from 'react';
 import TareaFormulario from './TareaFormulario';
 import Tarea from './Tarea';
 import '../hojas-de-estilo/ListaDeTareas.css';
 
 function ListaDeTareas() {
+
+  const getLocalStorage = () => {
+    let tarea = localStorage.getItem('Tareas');
+    if (tarea) {
+      return (tarea = JSON.parse(localStorage.getItem('Tareas')));
+    } else {
+      return [];
+    }
+  };
   
-  const [tareas, setTareas] = useState([]);
-/*   localStorage.setItem('tareas', JSON.stringify(tareas)) */
+  const [tareas, setTareas] = useState(getLocalStorage());
 
   const agregarTarea = tarea => {
     if (tarea.texto.trim()){
@@ -15,12 +23,12 @@ function ListaDeTareas() {
       setTareas(tareasActualizadas);
     }
   };
-
+  
   const eliminarTarea = id => {
     const tareasActualizadas = tareas.filter(tarea => tarea.id !== id);
     setTareas(tareasActualizadas);
   };
-
+  
   const completarTarea = id => {
     const tareasActualizadas = tareas.map(tarea => {
       if (tarea.id === id){
@@ -30,15 +38,11 @@ function ListaDeTareas() {
     });
     setTareas(tareasActualizadas)
   };
-
-  /* const leerLocalStorage = () => {
-    if (localStorage.getItem('tareas') === null) {
-      tareas = [];
-    } else {
-      tareas = JSON.parse(localStorage.getItem('tareas'));
-    }
-  } */
-
+  
+  useEffect(() => {
+     localStorage.setItem('Tareas', JSON.stringify(tareas))
+   }, [tareas])
+  
   return(
     <>
       <TareaFormulario onSubmit={agregarTarea} /> 
