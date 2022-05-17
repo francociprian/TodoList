@@ -24,6 +24,10 @@ function ListaDeTareas() {
     }
   };
   
+  const deleteTasks = () => {
+    setTareas([])
+  }
+
   const eliminarTarea = id => {
     const tareasActualizadas = tareas.filter(tarea => tarea.id !== id);
     setTareas(tareasActualizadas);
@@ -47,19 +51,24 @@ function ListaDeTareas() {
     <>
       <TareaFormulario onSubmit={agregarTarea} /> 
       <div className='tareas-lista-contenedor'>
-      {
-        tareas.map((tarea) => 
-          <Tarea
-            key={tarea.id}
-            id={tarea.id}
-            texto={tarea.texto}
-            completada={tarea.completada}
-            completarTarea={completarTarea}
-            eliminarTarea={eliminarTarea}
-             />
-        )
-      }      
-     </div>
+        {
+          tareas.map((tarea) => 
+            <Tarea
+              key={tarea.id}
+              id={tarea.id}
+              texto={tarea.texto}
+              completada={tarea.completada}
+              completarTarea={completarTarea}
+              eliminarTarea={eliminarTarea}
+              />
+          )
+        }   
+      </div>
+      {tareas.length > 0 && 
+        <div className='delete-container'>
+          <button onClick={deleteTasks} className='delete-button'>deleteTask</button>
+        </div>   
+      }
     </>
   );
 }

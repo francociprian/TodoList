@@ -1,8 +1,8 @@
 .tarea-contenedor {
   width: 500px;
-  min-height: 65px;
+  min-height: 50px;
   margin: 5px 0;
-  padding: 8px 15px 8px 20px;
+  padding: 0 20px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -39,10 +39,14 @@
 
 /* Icono */
 
-.tarea-icono {
+.tarea-delete {
   width: 32px;
   height: 32px;
   margin: 5px;
+  transition: all 0.3s ease 0s;
+}
+.tarea-delete:hover {
+  color:#e11919;
 }
 .tarea-check {
   width: 32px;
@@ -50,13 +54,14 @@
   margin: 5px;
   color: #c3c2c280;
 }
-
-.tarea-check.completada{
-  color: rgb(51, 198, 51);
+.tarea-check:hover{
+  color:rgb(49, 111, 49)
 }
 
 /* Tarea Completada */
-
+.tarea-check.completada{
+  color: rgb(51, 198, 51);
+}
 .tarea-contenedor.completada {
   background-color: rgb(49, 111, 49);
   text-decoration: line-through;

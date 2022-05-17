@@ -4,3 +4,38 @@
   justify-content: center;
   margin-top: 15px;
 }
+
+.delete-container {
+  padding: 2rem;
+  display: flex;
+  justify-content: center;
+}
+
+.delete-button {
+  font-size: 1rem;
+  font-weight: 300;
+  letter-spacing: 2px;
+  background: none;
+  /* border: 1px solid crimson; */
+  border: none;
+  padding: 5px;
+  border-radius: 5px;
+  height: 35px;
+  cursor: pointer;
+  color: #e11919;
+  transition: all 0.3s ease 0s;
+}
+
+.delete-button:hover {
+  padding: 0 25px;
+  color: aliceblue;
+  background-color: #e11919;
+  border: 1px solid #e11919;
+}
+
+@media (max-width: 576px) {
+  .tareas-lista-contenedor {
+    
+    margin-top: 30px;
+  }
+}

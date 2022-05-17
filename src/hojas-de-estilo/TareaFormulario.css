@@ -5,7 +5,7 @@
   flex-wrap: wrap;
   align-items: center;
   justify-content: center;  
-  gap: 1rem;   
+  gap: 3rem;   
 }
 
 /* Campo de Texto */
@@ -23,17 +23,30 @@
 /* Boton Agregar Tarea */
 
 .tarea-boton {
-  font-size: 35px;
+  font-size: 30px;
   border-radius: 4px;
   cursor: pointer;
   border: none;
   outline: none;
   background: none;
   color: black;
+  
+  /* border: 2px solid black; */
+  padding: 7px;
+  transition: all 0.3s ease 0s;
+}
+.tarea-boton:hover{
+  color: white;
+  background-color: #bd8ebd;
+  border: 2px solid #bd8ebd;
+  padding: 7px 15px;
 }
 
 @media (max-width: 576px) {
   .tarea-input{
     width: 100%;
+  }
+  .tarea-formulario{
+    gap: 1rem;
   }
 }

@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import '../hojas-de-estilo/TareaFormulario.css';
 import { v4 as uuidv4 } from 'uuid';
-import { MdAddCircleOutline } from "react-icons/md";
 
 function TareaFormulario(props) {
 
@@ -34,12 +33,12 @@ function TareaFormulario(props) {
         autoFocus
         className='tarea-input'
         type='text'
-        placeholder='Escribe una Tarea'
+        placeholder='Write a task'
         name='texto'
         onChange={handleChange}
       />
       <button className='tarea-boton'>
-        <MdAddCircleOutline/>
+        Add
       </button>
     </form>
   );
