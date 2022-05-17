@@ -6,13 +6,13 @@ function TareaFormulario(props) {
 
   const [input, setInput] = useState('');
 
-  const manejarCambio = e => {
+  const handleChange = e => {
     setInput(e.target.value);
   };
 
-  const manejarEnvio = e => {
+  const handleShipping = e => {
     e.preventDefault();
-
+    
     const tareaNueva = {
       id: uuidv4(),
       texto: input,
@@ -20,18 +20,20 @@ function TareaFormulario(props) {
     };
 
     props.onSubmit(tareaNueva);
+    e.target.reset() // resetear manejarEnvio despues de mandar algo!
   };
 
   return (
     <form 
       className='tarea-formulario'
-      onSubmit={manejarEnvio}>
+      onSubmit={handleShipping}>
       <input
+        autoFocus
         className='tarea-input'
         type='text'
         placeholder='Escribe una Tarea'
         name='texto'
-        onChange={manejarCambio}
+        onChange={handleChange}
       />
       <button className='tarea-boton'>
         Agregar Tarea
