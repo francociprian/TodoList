@@ -19,9 +19,8 @@
 html, 
 body {
   color: white;
-  background-color: #1b1b32;
+  background-color: #66A39E;
   font-family: 'SFPRODISPLAY', sans-serif;
-  margin-top: 40px;
 }
 
 h1 {
@@ -43,10 +42,10 @@ h1 {
 /* Logo */
 .logo-contenedor {
   width: 100%;
-  margin: 20px;
+  margin: 10px;
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-start;
 }
 
 .logo {
@@ -56,23 +55,30 @@ h1 {
 /* Listas de Tareas */
 
 .tareas-lista-principal {
-  width: 600px;
+  width: 800px;
   min-height: 500px;
-  background-color: #d0d0d5;
-  padding: 25px;
-  margin: 10px;
-  border-radius: 26px;
+  padding: 15px;
+  margin: 10px 10px 30px 10px;
+  border-radius: 15px;
 }
 
 @media (max-width: 576px) {
   .logo {
-    width: 100%;
+    width: 80%;
   }
 
   .tareas-lista-principal {
-    width: 80%;
+    width: 90%;
     min-height: 500px;
-    background-color: #d0d0d5;
-    padding: 15px;
+    /* background-color: #d0d0d5; */
+    padding: 5px;
   }
+}
+
+
+.blob{
+  width: 30%;
+  position: absolute;
+  bottom: 2px;
+  right: 2px;
 }

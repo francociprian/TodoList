@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import '../hojas-de-estilo/TareaFormulario.css';
 import { v4 as uuidv4 } from 'uuid';
+import { MdAddCircleOutline } from "react-icons/md";
 
 function TareaFormulario(props) {
 
@@ -20,7 +21,9 @@ function TareaFormulario(props) {
     };
 
     props.onSubmit(tareaNueva);
+
     e.target.reset() // resetear manejarEnvio despues de mandar algo!
+    setInput('')
   };
 
   return (
@@ -36,7 +39,7 @@ function TareaFormulario(props) {
         onChange={handleChange}
       />
       <button className='tarea-boton'>
-        Agregar Tarea
+        <MdAddCircleOutline/>
       </button>
     </form>
   );

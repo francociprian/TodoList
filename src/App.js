@@ -1,7 +1,6 @@
 import './App.css';
 import logo from './imagenes/todoList.png';
 import ListaDeTareas from './componentes/ListaDeTareas';
-
 function App() {
   return (
     <div className='aplicacion-tareas'>

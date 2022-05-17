@@ -1,29 +1,29 @@
 .tarea-contenedor {
   width: 500px;
   min-height: 65px;
-  background-color: #1b1b32;
   margin: 5px 0;
   padding: 8px 15px 8px 20px;
   display: flex;
   justify-content: space-between;
   align-items: center;
   border-radius: 7px;
-  border: 1px solid white;
+  border: 0.5px solid rgb(255, 255, 255);
   cursor: pointer;    
 }
 
 /* Colores */
 
-.tarea-contenedor:nth-child(3n + 1) {
-  background-color: #1b1b32;
+.tarea-contenedor:nth-child(4n + 1) {
+  background-color: #474747;
 }
-
-.tarea-contenedor:nth-child(3n + 2) {
-  background-color: #2a2a40;
+.tarea-contenedor:nth-child(4n + 2) {
+  background-color: #5C5C5C;
 }
-
-.tarea-contenedor:nth-child(3n + 3) {
-  background-color: #3b3b4f;
+.tarea-contenedor:nth-child(4n + 3) {
+  background-color: #707070;
+}
+.tarea-contenedor:nth-child(4n + 4) {
+  background-color: #858585;
 }
 
 /* Texto */
@@ -40,14 +40,24 @@
 /* Icono */
 
 .tarea-icono {
-  width: 25px;
-  height: 25px;
+  width: 32px;
+  height: 32px;
   margin: 5px;
+}
+.tarea-check {
+  width: 32px;
+  height: 32px;
+  margin: 5px;
+  color: #c3c2c280;
+}
+
+.tarea-check.completada{
+  color: rgb(51, 198, 51);
 }
 
 /* Tarea Completada */
 
 .tarea-contenedor.completada {
-  background-color: #5a01a7;
+  background-color: rgb(49, 111, 49);
   text-decoration: line-through;
 }
