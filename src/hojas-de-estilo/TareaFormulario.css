@@ -11,10 +11,10 @@
 /* Campo de Texto */
 
 .tarea-input {
-  width: 650px;
+  width: 500px;
   font-size: 18px;
   background-color: white;
-  padding: 14px 32px 14px 16px;
+  padding: 12px 32px 12px 16px;
   border-radius: 4px;
   border: 2px solid #00471b;
   outline: none;
@@ -23,6 +23,7 @@
 /* Boton Agregar Tarea */
 
 .tarea-boton {
+  width: 80px;
   font-size: 30px;
   border-radius: 4px;
   cursor: pointer;
@@ -31,15 +32,15 @@
   background: none;
   color: black;
   
-  /* border: 2px solid black; */
+  border: 0.5px solid black;
   padding: 7px;
   transition: all 0.3s ease 0s;
 }
 .tarea-boton:hover{
   color: white;
   background-color: #bd8ebd;
-  border: 2px solid #bd8ebd;
-  padding: 7px 15px;
+  border: 1px solid #bd8ebd;
+  padding: 7px 10px;
 }
 
 @media (max-width: 576px) {

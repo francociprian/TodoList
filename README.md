@@ -6,7 +6,7 @@
 ¡Hola! Esta es una aplicación de tareas interactiva desarrollada con React. Puedes agregar una tarea, eliminarla de la lista y marcarla como completada.
 
 <p align="center">
-  <img width="700" src="src/imagenes/todoList-screen3.png" alt="todoList"/>
+  <img width="700" src="src/imagenes/todoList-screenn.png" alt="todoList"/>
 </p>
 
 ### Despliegue con vercel: <https://lista-de-tareas-franco.vercel.app/>
